@@ -1,0 +1,433 @@
+/* fonts integration */
+@font-face {
+  font-family: "Inconsolata-Bold";
+  src: url("/static/fonts/Inconsolata_Condensed-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata-Medium";
+  src: url("/static/fonts/Inconsolata_Condensed-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Inconsolata-ExtraBold";
+  src: url("/static/fonts/Inconsolata_Condensed-ExtraBold.ttf");
+}
+
+/* General CSS */
+:root {
+  --background: #202456;
+  --foreground: #fafafc;
+  --links: #2980dd;
+  --footer: #b6b3b3;
+}
+
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar CSS */
+#navbar {
+  width: 100%;
+  position:fixed;
+  top: 0;
+  background-color: #b6b3b3;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* Adjusted to space items accordingly */
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem;
+  /* Added padding to ensure items are not touching the edges */
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* Change to space-around for even spacing */
+  list-style: none;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  flex-grow: 2;
+  /* Allow the ul to grow and take available space */
+}
+
+.nav-item {
+  padding: 0 20px;
+  font-size: 1.3rem;
+  flex-grow: 1;
+  /* Allow each nav item to grow and take available space */
+  text-align: center;
+  /* Center the text inside each nav item */
+  font-size: 1.5rem;
+  font-family: "Inconsolata-Medium";
+  letter-spacing: 0.1rem;
+}
+
+.nav-edge {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  flex-grow: 0.5;
+  /* Allow the edge divs to grow and take available space */
+}
+
+
+
+.nav-item a {
+  text-decoration: none;
+  color: var(--background);
+  padding-bottom: 20px;
+}
+
+.nav-item a:hover {
+  color: var(--links);
+  transition: ease-in-out 0.2s;
+  color: deeppink;
+}
+
+#nav-name {
+  font-family: "Inconsolata-Bold";
+}
+
+/* Hero CSS */
+#hero-grid {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  padding-top: 50px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  z-index: 20;
+  border: #000 1px solid;
+}
+
+#hero-content {
+  font-family: "Inconsolata-Bold";
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 40px;
+}
+
+h2 {
+  font-size: 100px;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 25px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+ .icon1 {
+  width: 30px;
+  height: 30px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+} 
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: ease-in-out 0.2s;
+}
+
+#hero-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Skills CSS */
+#skills-grid {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  border: #ffffff 1px solid;
+
+}
+
+#skills-content {
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  background-color: #b6b3b3;
+}
+
+/* About CSS */
+#about-section {
+  font-family: "Inconsolata-Bold";
+  margin: 10px 200px;
+  border-bottom: #ffffff 1px solid;
+  line-height: 2.4;
+  padding-bottom: 70px;
+}
+
+#PreviousE-section {
+  font-family: "Inconsolata-Bold";
+  margin: 10px 200px;
+  border-bottom: #ffffff 0px solid;
+  line-height: 1.7;
+}
+
+#PreviousE-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create four equal columns */
+  grid-template-rows: repeat(2, 1fr); /* Create two equal rows */
+  gap: 20px; /* Add space between the items */
+}
+
+.experience {
+  display: flex;
+  flex-direction: row; /* Changed to column for better alignment */
+  align-items: center;
+  justify-content: center;
+  row-gap: 20px;
+  height: auto; /* Let height adjust to content */
+  width: 100%; /* Adjust to grid column width */
+  max-width: 100%; /* Ensure the project fits within the grid */
+  border: #ffffff 0px solid;
+  padding: 15px; /* Add padding for content */
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+.text2 {
+  margin-bottom: 10px; /* Space between text and image */
+  text-align: center;
+  padding-right: 10px;
+}
+
+.image2 img {
+  max-width: 100%; /* Ensure the image fits within its container */
+  height: auto;
+  padding-right: 20px;
+}
+
+
+
+
+
+/* Footer CSS */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Allow the main content to grow and push the footer down */
+}
+footer {
+  width: 100%;
+  height: 12rem;
+  background-color: var(--footer);
+  color: var(--background);
+  font-family: "Inconsolata-Bold";
+  display: flex;
+  align-items: center;
+  position: relative; /* Ensure it stays at the bottom of the content */
+  bottom: 0px; /* Align it to the bottom of the page */
+  left: 0px; /* Ensure it spans the entire width */
+  padding: 10px 0;
+  text-align: center;
+  
+}
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 200px;
+  padding-right: 100px;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure the body or a container has a minimum height to push the footer down */
+body, .content-container {
+  min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1; /* Allow the content container to grow and push the footer down */
+}
+
+.footer-item-left {
+  align-items: flex-start;
+}
+.footer-item-right {
+  align-items: flex-end;
+}
+
+/* Contact Page CSS */
+#contact-content {
+  font-family: "Inconsolata-Bold";
+  width: 90%;
+  padding: 5% 0 5% 10%;
+}
+
+#contactform {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 25px; /* Space between input boxes */
+  padding-top: 5%;
+}
+
+/* Stack labels and input boxes ontop of each other */
+#contactform div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+  
+}
+
+#contactform input[type="text"],
+#contactform input[type="email"],
+textarea {
+  font-family: "Inconsolata-Bold"; /* Change font for user input */
+  font-size: 20px;
+  height: 2.5rem;
+}
+
+textarea {
+  height: 300px;
+}
+
+#contactform input[type="submit"] {
+  font-family: "Inconsolata-Bold";
+  font-size: 18px;
+  width: 30%;
+  padding: 10px 20px;
+  background-color: var(--foreground);
+  color: var(--background);
+  border-bottom: 80px solid var(--background);
+  border-left: 2px solid var(--background);
+  border-right: 2px solid var(--background);
+  border-top: 2px solid var(--background);
+  
+}
+
+#contactform #firstname-lastname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#contactform #firstname-lastname div {
+  width: 40%;
+}
+
+footer p {
+  font-size: 1.3rem;
+}
+
+footer img {
+  filter: invert(1);
+}
+
+/* Project Page css */
+/* Project Page CSS */
+#project-section {
+  font-family: "Inconsolata-Bold";
+  border-top: #ffffff 1px solid;
+  border-bottom: var(--background) 50px solid;
+  padding: 30px; /* Add padding to give space inside the section */
+  margin: 10px 160px;
+}
+
+#project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Force two equal columns */
+  gap: 20px; /* Space between each project */
+  width: 100%; /* Ensure the grid takes the full width */
+  padding-top: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column; /* Changed to column for better alignment */
+  align-items: center;
+  justify-content: center;
+  max-width: 100%; /* Ensure the project fits within the grid */
+  height: auto; /* Let height adjust to content */
+  width: auto; /* Adjust to grid column width */
+  border: #000 1px solid;
+  padding: 15px; /* Add padding for content */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  margin-left: 0;
+}
+
+.project-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  text-align: center; /* Centre align title */
+}
+
+.project-description {
+  font-size: 1rem;
+  text-align: center; /* Optional: Align text neatly */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.project-image {
+  width: 60%; /* Ensure images fit within their container */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+.project-github-button {
+  color: #202456;
+  background-color: #b6b3b3;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 5px; /* Rounded corners */
+}
+
+.project-github-button:hover {
+  background-color: var(--links);
+  color: #ffffff;
+  transition: ease-in-out 0.2s;
+}
