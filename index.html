@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block title %} My Portfolio - Home {% endblock %} 
+
+{% block content %}
+     <div id="hero-section">
+        <section id="hero-grid">
+            <img src="static/images/hero_img.jpeg"
+            class="image" />
+            <div id="hero-content">
+                <h2>NATHAN DER</h2>
+                <p>BUSINESS TECHNOLOGY MANAGEMENT STUDENT</p>
+                <div id="hero-buttons">
+                    <a href="https://www.linkedin.com/in/nathan-d-2877722ab?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B48doDhtmS0a6OPHQGD8swQ%3D%3D" class="hero-button" target="_blank">
+                        <img
+                src="/static/images/linkedin-app-white-icon.png"
+                alt="LinkedIn Icon"
+                class="icon"
+              />
+                    </a>
+                    <a
+                    href="https://github.com/NeathRand"
+                    class="hero-button"
+                    target="_blank"
+                  >
+                    <img
+                      src="static/images/github-white-icon.webp"
+                      alt="Github Icon"
+                      class="icon"
+                    />
+                  </a>
+                  <a href="mailto:nathanderr4@gmail.com" class="hero-button" target="_blank">
+                    <img
+                      src="static/images/email_icon.png"
+                      alt="Email Icon"
+                      class="icon1"
+                    />
+                    </a>
+            </div>
+        </div>
+        </section>
+     </div>
+     <div id="skills-section">
+        <section id="skills-grid">
+          <div id="skills-content">
+            <img src="/static/images/python_icon.png" alt="Python Icon" />
+            <img src="/static/images/java_icon.png" alt="Java Icon" />
+            <img src="/static/images/html_icon.png" alt="HTML Icon" />
+            <img src="/static/images/css_icon.png" alt="CSS Icon" />
+            <img src="/static/images/javascript_icon.png" alt="JavaScript Icon" />
+          </div>
+          <img src="/static/images/city_img.jpg" alt="City Image" class="image" />
+        </section>
+      </div>
+<!-- edit the above content to match your skill set^^^-->
+<div id="about-section">
+    <section>
+      <h2>ABOUT ME</h2>
+      <p>I am currently pursuing a degree in Business Technology Management at Toronto Metropolitan University, where I combine my passion for technology with the dynamic world of business. 
+        With a strong interest in technology and coding, I have developed skills in various programming languages, including HTML, CSS, Python, SQL, Java, and JavaScript, which enables me to approach problem-solving with creativity and efficiency. 
+        In addition to my coding expertise, I am proficient in using Microsoft Office applications, particularly Excel, where I leverage advanced tools for data analysis and reporting. 
+        My academic and practical experiences have equipped me with a solid foundation in both technology and business, and I am eager to apply these skills in innovative and impactful ways within the tech-driven landscape.</p>
+    </section>
+  </div>
+
+<!--container wiht text and image-->
+<div id="PreviousE-section">
+  <section>
+    <h2>PREVIOUS EXPERIENCE</h2>
+    <div id="text-image-container">
+      <div class="experience">
+        <div class="text2">
+          <p>TJX Canada (Winners, Homesense, Marshalls)</p>
+        </div>
+        <div class="image2">
+          <img src="static/images/images.png" alt="Description of image">
+        </div>
+        <div class="text2">
+          <p>Peel District School Board</p>
+        </div>
+        <div class="image2">
+          <img src="static/images/PDSB.png" alt="Description of image">
+        </div>
+        <div class="text2">
+          <p>Metroland Media Group</p>
+        </div>
+        <div class="image2">
+          <img src="static/images/MetrolandMedia.jpeg" alt="Description of image">
+        </div>
+      </div>
+    </div>
+  </section>    
+</div>
+    
+</div>
+    
+  <div id="PreviousE-grid">
+    <!--For loop to render all previous experience from previousE list from app.py-->
+    {% for PreviousE in PREVIOUS_EXPERIENCE %}
+
+    <div class="PreviousE">
+      <img src="/static/images/PreviousE_img.jpg" alt="Previous Experience Image" class="PreviousE-image"/>
+      <div class="PreviousE-content">
+        <p class="PreviousE-title">{{PreviousE-title["title"]}}</p>
+        <p class="PreviousE-description">{{PreviousE-description["description"]}}</p>
+      </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<div id="project-section">
+  <section>
+    <h2>PROJECTS</h2>
+
+    <!--For loop to render all projects from projects list from app.py-->
+    <div id="project-grid">
+      {% for project in projects %}
+
+      <div class="project">
+        <img src={{project["image"]}} alt="Project Image" class="project-image"/>
+        <div class="project-content">
+          <p class="project-title">{{project["title"]}}</p>
+          <p class="project-description">{{project["description"]}}</p>
+          <a href={{project["github"]}} class="project-github-button" target="_blank">VIEW GITHUB</a>
+        </div>
+      </div> 
+
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+{% endblock %}
