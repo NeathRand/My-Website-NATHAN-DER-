@@ -29,6 +29,7 @@ Run on localhost
 ``
 flask run
 ``
+
 Main Page:
 
 ![Screenshot 2025-01-20 at 01-17-42 My Portfolio - Home](https://github.com/user-attachments/assets/96ac572c-14af-46ca-8b9f-2819d365d701)
